@@ -1,0 +1,74 @@
+//首页
+$scope, $http
+
+$http->xxx.php
+
+ng-repeat
+自定义$service
+
+如何在angular的ngRoute路由中声明地址栏参数?
+when('/goods/:id', function(){...});
+在斜线后面加上:参数名称即可
+#/goods/2
+#/goods/3 ...
+
+//如何获取路由中的参数?
+这里需要$routeParams服务,通过$routeParams获取路由中传递的参数
+在控制器注入$routeParams, 使用$routeParams.参数名称来获取参数
+比如/goods/:id 的路由传参数id为3的值, 获取方式: $routeParams.id来获取
+
+
+
+
+
+
+//商品详情页
+
+//$cookie信息,能把商品信息存入cookie,在购物车中显示出来
+//如何获取传递过来的商品列表地址栏的参数
+
+//跳转到购物车页面
+//购物车信息列表显示
+
+//购物车商品数量加减
+//购物车商品金额计算  使用到$filter过滤器
+$cookie.getAll()//获取cookie所有的内容
+$cookie.getObject('items')//获取cookie内容
+$cookie.putObject('items', $data)//写入cookie
+$cookie.remove('items');//清空cookie
+
+
+
+//angular如何跳转?
+angular中实现页面跳转需要使用$location服务.控制器引入服务
+$location基于window.location跳转
+$location.url('/cart');
+读取地址栏的URL,端口号等, 用$location服务
+也可以帮我们跳转页面,就是window.location
+
+$http.post('pay.php', $data); //post的ajax请求
+
+
+php接收angular的post请求的数据, 使用file_get_contents来接收, 否则是接不到值的
+$data = file_get_contents('php://input');
+print_r(json_decode(data, true));
+
+
+
+
+
+//登录页面
+检测用户$cookie是否登录, 没有登录跳转到登录页面
+
+
+
+
+//angular的js如何拆分?
+
+
+//引入angularjs
+//引入路由模块
+//引入cookie模块  ->控制器注入
+
+//注入模块
+//注入服务, 服务带有$符
